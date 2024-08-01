@@ -1,0 +1,28 @@
+22:07:41 **** Rebuild of configuration Debug for project Exam-2023WiSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\NoDiscount.o ..\myCode\NoDiscount.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\tests.o ..\myCode\tests.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\main.o ..\myCode\main.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\QuantityDiscount.o ..\myCode\QuantityDiscount.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Item.o ..\myCode\Item.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\ShoppingList.o ..\myCode\ShoppingList.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\FixedDiscount.o ..\myCode\FixedDiscount.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Product.o ..\myCode\Product.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\ShopDb.o ..\myCode\ShopDb.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Discount.o ..\myCode\Discount.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Shop.o ..\myCode\Shop.cpp 
+..\myCode\ShopDb.cpp: In member function 'std::vector<Shop*> ShopDb::shops() const':
+..\myCode\ShopDb.cpp:21:25: error: cannot convert 'const std::pair<const std::__cxx11::basic_string<char>, std::unique_ptr<Shop> >' to 'Shop*' in initialization
+   21 |         for(Shop* shop: knownShops){
+      |                         ^~~~~~~~~~
+..\myCode\ShopDb.cpp: In member function 'Shop* ShopDb::shopByName(std::string)':
+..\myCode\ShopDb.cpp:28:25: error: cannot convert 'std::pair<const std::__cxx11::basic_string<char>, std::unique_ptr<Shop> >' to 'Shop*' in initialization
+   28 |         for(Shop* shop: knownShops){
+      |                         ^~~~~~~~~~
+g++ -o Exam-2023WiSe myCode\Discount.o myCode\FixedDiscount.o myCode\Item.o myCode\NoDiscount.o myCode\Product.o myCode\QuantityDiscount.o myCode\Shop.o myCode\ShopDb.o myCode\ShoppingList.o myCode\main.o myCode\tests.o 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\ShopDb.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+Info: Parallel threads used: 11
+
+22:07:44 Build Failed. 3 errors, 0 warnings. (took 2s.778ms)
+

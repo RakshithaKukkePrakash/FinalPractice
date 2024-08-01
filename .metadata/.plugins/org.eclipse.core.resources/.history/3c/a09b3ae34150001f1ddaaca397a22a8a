@@ -1,0 +1,60 @@
+/*
+ * Shop.cpp
+ *
+ *  Created on: 10.02.2024
+ *      Author: mnl
+ */
+
+#include <list>
+#include <stdexcept>
+
+#include "Shop.h"
+#include "ShoppingList.h"
+#include "Item.h"
+#include "Discount.h"
+
+using namespace std;
+
+Shop::Shop(std::string name) : name{name} {
+}
+
+std::string Shop::getName() const {
+	return name;
+}
+
+Shop& Shop::addProduct(const Product &product) {
+	products.insert({name, product});
+	return *this;
+}
+
+Shop& Shop::setBasePrice(std::string productName, float basePrice) {
+	for(auto& prod: products){
+		if(prod.first == productName){
+			prod.second.setBasePrice(basePrice);
+		}
+		else{
+			throw invalid_argument("The product is not available");
+		}
+	}
+	return *this;
+}
+
+Shop& Shop::setDiscount(std::string productName,
+		std::shared_ptr<Discount> discount) {
+	for(auto& prod: products){
+		if(prod.first == productName){
+			prod.second.setDiscount(discount);
+		}
+		else{
+			throw invalid_argument("The product is not available");
+		}
+	}
+	return *this;
+}
+
+float Shop::calculatePurchase(const ShoppingList& shoppingList,
+		std::set<const Item*>& notAvailable) const {
+
+	return 0;
+}
+
