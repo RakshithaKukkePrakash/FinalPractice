@@ -507,3 +507,120 @@ C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:40
 g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
 C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
 collect2.exe: error: ld returned 1 exit status
+17:54:54 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+18:00:59 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+18:03:42 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:29:25: error: no match for 'operator!=' (operand types are 'std::_Rb_tree_const_iterator<std::pair<const float, float> >' and 'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >')
+   29 |     for(auto it= min; it!=max; it++)
+      |                       ~~^~~~~
+      |                       |   |
+      |                       |   std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >
+      |                       std::_Rb_tree_const_iterator<std::pair<const float, float> >
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_algobase.h:64,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:63,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:62,
+                 from ..\myCode\TableBasedAdjuster.h:4,
+                 from ..\myCode\TableBasedAdjuster.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:842:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator!=(const pair<_T1, _T2>&, const pair<_T1, _T2>&)'
+  842 |     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:842:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::pair<_T1, _T2>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_algobase.h:67:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:462:5: note: candidate: 'template<class _Iterator> bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)'
+  462 |     operator!=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:462:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:507:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)'
+  507 |     operator!=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:507:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1697:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)'
+ 1697 |     operator!=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1697:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1763:5: note: candidate: 'template<class _Iterator> bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)'
+ 1763 |     operator!=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1763:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::move_iterator<_IteratorL>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:64:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:245:5: note: candidate: 'template<class _T1, class _T2> bool std::operator!=(const allocator<_Tp1>&, const allocator<_T2>&)'
+  245 |     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:245:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::allocator<_Tp1>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:63,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:63:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1960:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const tuple<_Args1 ...>&, const tuple<_Args2 ...>&)'
+ 1960 |     operator!=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1960:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::tuple<_Args1 ...>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1558:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const map<_Key, _Tp, _Compare, _Alloc>&, const map<_Key, _Tp, _Compare, _Alloc>&)'
+ 1558 |     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1558:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::map<_Key, _Tp, _Compare, _Alloc>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:64:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1179:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>&, const multimap<_Key, _Tp, _Compare, _Alloc>&)'
+ 1179 |     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1179:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Alloc>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:401:7: note: candidate: 'bool std::operator!=(const _Rb_tree_const_iterator<pair<const float, float> >::_Self&, const _Rb_tree_const_iterator<pair<const float, float> >::_Self&)'
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:401:49: note:   no known conversion for argument 2 from 'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' to 'const std::_Rb_tree_const_iterator<std::pair<const float, float> >::_Self&'
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |                                    ~~~~~~~~~~~~~^~~
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+18:04:03 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+18:05:39 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+18:06:47 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+18:12:55 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 

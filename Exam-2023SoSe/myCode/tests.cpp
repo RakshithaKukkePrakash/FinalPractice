@@ -70,10 +70,6 @@ void adjusterTests() {
     for(int i = 0; i< 5 ; i++){
         assertTrue(tAdj.adjust(testValues[i]) - expected[i] < 0.001 ,"Incorrect assert 1.3");
     }
-
-
-
-
 }
 
 /**
