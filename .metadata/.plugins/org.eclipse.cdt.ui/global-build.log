@@ -1,25 +1,509 @@
-22:07:41 **** Rebuild of configuration Debug for project Exam-2023WiSe ****
+16:22:05 **** Rebuild of configuration Debug for project Exam-2023SoSe ****
 Info: Internal Builder is used for build
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\NoDiscount.o ..\myCode\NoDiscount.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\tests.o ..\myCode\tests.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\main.o ..\myCode\main.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\QuantityDiscount.o ..\myCode\QuantityDiscount.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Item.o ..\myCode\Item.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\ShoppingList.o ..\myCode\ShoppingList.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\FixedDiscount.o ..\myCode\FixedDiscount.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Product.o ..\myCode\Product.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\ShopDb.o ..\myCode\ShopDb.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Discount.o ..\myCode\Discount.cpp 
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Shop.o ..\myCode\Shop.cpp 
-..\myCode\ShopDb.cpp: In member function 'std::vector<Shop*> ShopDb::shops() const':
-..\myCode\ShopDb.cpp:21:25: error: cannot convert 'const std::pair<const std::__cxx11::basic_string<char>, std::unique_ptr<Shop> >' to 'Shop*' in initialization
-   21 |         for(Shop* shop: knownShops){
-      |                         ^~~~~~~~~~
-..\myCode\ShopDb.cpp: In member function 'Shop* ShopDb::shopByName(std::string)':
-..\myCode\ShopDb.cpp:28:25: error: cannot convert 'std::pair<const std::__cxx11::basic_string<char>, std::unique_ptr<Shop> >' to 'Shop*' in initialization
-   28 |         for(Shop* shop: knownShops){
-      |                         ^~~~~~~~~~
-g++ -o Exam-2023WiSe myCode\Discount.o myCode\FixedDiscount.o myCode\Item.o myCode\NoDiscount.o myCode\Product.o myCode\QuantityDiscount.o myCode\Shop.o myCode\ShopDb.o myCode\ShoppingList.o myCode\main.o myCode\tests.o 
-C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\ShopDb.o: No such file or directory
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+..\myCode\tests.cpp: In function 'void adjusterTests()':
+..\myCode\tests.cpp:62:11: warning: unused variable 'expected' [-Wunused-variable]
+   62 |     float expected[] = { -11, -1.1, 0, 0.9, 9 };
+      |           ^~~~~~~~
+..\myCode\tests.cpp: In function 'void sensorTests()':
+..\myCode\tests.cpp:75:11: warning: unused variable 'testValues' [-Wunused-variable]
+   75 |     float testValues[] = { -10, -1, 0, 1, 10 };
+      |           ^~~~~~~~~~
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\NullAdjuster.o" "..\\myCode\\NullAdjuster.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\SensorNetwork.o" "..\\myCode\\SensorNetwork.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\Sensor.o" "..\\myCode\\Sensor.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\Adjuster.o" "..\\myCode\\Adjuster.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TestSensor.o" "..\\myCode\\TestSensor.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\LinearAdjuster.o" "..\\myCode\\LinearAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+Info: Nothing to build for Exam-2023SoSe
+16:22:23 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+..\myCode\tests.cpp: In function 'void adjusterTests()':
+..\myCode\tests.cpp:62:11: warning: unused variable 'expected' [-Wunused-variable]
+   62 |     float expected[] = { -11, -1.1, 0, 0.9, 9 };
+      |           ^~~~~~~~
+..\myCode\tests.cpp: In function 'void sensorTests()':
+..\myCode\tests.cpp:75:11: warning: unused variable 'testValues' [-Wunused-variable]
+   75 |     float testValues[] = { -10, -1, 0, 1, 10 };
+      |           ^~~~~~~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:26:49 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+..\myCode\tests.cpp: In function 'void adjusterTests()':
+..\myCode\tests.cpp:65:11: warning: unused variable 'expected' [-Wunused-variable]
+   65 |     float expected[] = { -11, -1.1, 0, 0.9, 9 };
+      |           ^~~~~~~~
+..\myCode\tests.cpp: In function 'void sensorTests()':
+..\myCode\tests.cpp:78:11: warning: unused variable 'testValues' [-Wunused-variable]
+   78 |     float testValues[] = { -10, -1, 0, 1, 10 };
+      |           ^~~~~~~~~~
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:27:48 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+..\myCode\tests.cpp: In function 'void adjusterTests()':
+..\myCode\tests.cpp:64:11: warning: unused variable 'expected' [-Wunused-variable]
+   64 |     float expected[] = { -11, -1.1, 0, 0.9, 9 };
+      |           ^~~~~~~~
+..\myCode\tests.cpp: In function 'void sensorTests()':
+..\myCode\tests.cpp:77:11: warning: unused variable 'testValues' [-Wunused-variable]
+   77 |     float testValues[] = { -10, -1, 0, 1, 10 };
+      |           ^~~~~~~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:28:20 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\main.o" "..\\myCode\\main.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:34:37 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+..\myCode\tests.cpp: In function 'void sensorTests()':
+..\myCode\tests.cpp:87:11: warning: unused variable 'testValues' [-Wunused-variable]
+   87 |     float testValues[] = { -10, -1, 0, 1, 10 };
+      |           ^~~~~~~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:37:41 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\Sensor.o" "..\\myCode\\Sensor.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:49:02 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TestSensor.o" "..\\myCode\\TestSensor.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:49:18 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:50:25 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: myCode\tests.o: in function `void std::_Construct<LinearAdjuster>(LinearAdjuster*)':
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_construct.h:119:(.text$_ZSt10_ConstructI14LinearAdjusterJEEvPT_DpOT0_[_ZSt10_ConstructI14LinearAdjusterJEEvPT_DpOT0_]+0x3d): undefined reference to `LinearAdjuster::LinearAdjuster(float, float)'
 collect2.exe: error: ld returned 1 exit status
-Info: Parallel threads used: 11
+16:50:35 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: myCode\tests.o: in function `void std::_Construct<LinearAdjuster, int, int>(LinearAdjuster*, int&&, int&&)':
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_construct.h:119:(.text$_ZSt10_ConstructI14LinearAdjusterJiiEEvPT_DpOT0_[_ZSt10_ConstructI14LinearAdjusterJiiEEvPT_DpOT0_]+0x6f): undefined reference to `LinearAdjuster::LinearAdjuster(float, float)'
+collect2.exe: error: ld returned 1 exit status
+16:52:14 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\LinearAdjuster.o" "..\\myCode\\LinearAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+16:52:23 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:03:27 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\Sensor.o" "..\\myCode\\Sensor.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:04:32 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:11:39 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+..\myCode\DuplicateSensorName.cpp: In constructor 'DuplicateSensorName::DuplicateSensorName(std::string)':
+..\myCode\DuplicateSensorName.cpp:3:64: error: no matching function for call to 'std::invalid_argument::invalid_argument()'
+    3 | DuplicateSensorName::DuplicateSensorName(std::string sensorName) {
+      |                                                                ^
+In file included from ..\myCode\DuplicateSensorName.h:4,
+                 from ..\myCode\DuplicateSensorName.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note: candidate: 'std::invalid_argument::invalid_argument(std::invalid_argument&&)'
+  176 |     invalid_argument(invalid_argument&&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note: candidate: 'std::invalid_argument::invalid_argument(const std::invalid_argument&)'
+  174 |     invalid_argument(const invalid_argument&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note: candidate: 'std::invalid_argument::invalid_argument(const char*)'
+  173 |     explicit invalid_argument(const char*) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note: candidate: 'std::invalid_argument::invalid_argument(const std::string&)'
+  171 |     explicit invalid_argument(const string& __arg) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note:   candidate expects 1 argument, 0 provided
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\SensorNetwork.o" "..\\myCode\\SensorNetwork.cpp" 
+..\myCode\SensorNetwork.cpp: In member function 'SensorNetwork& SensorNetwork::add(std::unique_ptr<Sensor>&&)':
+..\myCode\SensorNetwork.cpp:5:23: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Sensor; _Dp = std::default_delete<Sensor>]'
+    5 |     for(auto s: this->sensors){
+      |                       ^~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:78,
+                 from ..\myCode\SensorNetwork.h:5,
+                 from ..\myCode\SensorNetwork.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:522:7: note: declared here
+  522 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h:33,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:46,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/list:63,
+                 from ..\myCode\SensorNetwork.h:4:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h: In instantiation of 'void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<Sensor>; _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::_List_node<std::unique_ptr<Sensor> >]':
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/alloc_traits.h:537:17:   required from 'static void std::allocator_traits<std::allocator<_Tp1> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = std::unique_ptr<Sensor>; _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::_List_node<std::unique_ptr<Sensor> >; allocator_type = std::allocator<std::_List_node<std::unique_ptr<Sensor> > >]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:713:33:   required from 'std::__cxx11::list<_Tp, _Alloc>::_Node* std::__cxx11::list<_Tp, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; _Node = std::__cxx11::list<std::unique_ptr<Sensor> >::_Node]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:2005:32:   required from 'void std::__cxx11::list<_Tp, _Alloc>::_M_insert(iterator, _Args&& ...) [with _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; iterator = std::__cxx11::list<std::unique_ptr<Sensor> >::iterator]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:1306:24:   required from 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; value_type = std::unique_ptr<Sensor>]'
+..\myCode\SensorNetwork.cpp:7:36:   required from here
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:187:11: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Sensor; _Dp = std::default_delete<Sensor>]'
+  187 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:522:7: note: declared here
+  522 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\DuplicateSensorName.o: No such file or directory
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\SensorNetwork.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:12:18 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\SensorNetwork.o" "..\\myCode\\SensorNetwork.cpp" 
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h:33,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:46,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/list:63,
+                 from ..\myCode\SensorNetwork.h:4,
+                 from ..\myCode\SensorNetwork.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h: In instantiation of 'void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::unique_ptr<Sensor>; _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::_List_node<std::unique_ptr<Sensor> >]':
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/alloc_traits.h:537:17:   required from 'static void std::allocator_traits<std::allocator<_Tp1> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = std::unique_ptr<Sensor>; _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::_List_node<std::unique_ptr<Sensor> >; allocator_type = std::allocator<std::_List_node<std::unique_ptr<Sensor> > >]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:713:33:   required from 'std::__cxx11::list<_Tp, _Alloc>::_Node* std::__cxx11::list<_Tp, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; _Node = std::__cxx11::list<std::unique_ptr<Sensor> >::_Node]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:2005:32:   required from 'void std::__cxx11::list<_Tp, _Alloc>::_M_insert(iterator, _Args&& ...) [with _Args = {const std::unique_ptr<Sensor, std::default_delete<Sensor> >&}; _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; iterator = std::__cxx11::list<std::unique_ptr<Sensor> >::iterator]'
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_list.h:1306:24:   required from 'void std::__cxx11::list<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::unique_ptr<Sensor>; _Alloc = std::allocator<std::unique_ptr<Sensor> >; value_type = std::unique_ptr<Sensor>]'
+..\myCode\SensorNetwork.cpp:7:36:   required from here
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/new_allocator.h:187:11: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = Sensor; _Dp = std::default_delete<Sensor>]'
+  187 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/memory:78,
+                 from ..\myCode\SensorNetwork.h:5:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/unique_ptr.h:522:7: note: declared here
+  522 |       unique_ptr(const unique_ptr&) = delete;
+      |       ^~~~~~~~~~
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+..\myCode\DuplicateSensorName.cpp: In constructor 'DuplicateSensorName::DuplicateSensorName(std::string)':
+..\myCode\DuplicateSensorName.cpp:3:64: error: no matching function for call to 'std::invalid_argument::invalid_argument()'
+    3 | DuplicateSensorName::DuplicateSensorName(std::string sensorName) {
+      |                                                                ^
+In file included from ..\myCode\DuplicateSensorName.h:4,
+                 from ..\myCode\DuplicateSensorName.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note: candidate: 'std::invalid_argument::invalid_argument(std::invalid_argument&&)'
+  176 |     invalid_argument(invalid_argument&&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note: candidate: 'std::invalid_argument::invalid_argument(const std::invalid_argument&)'
+  174 |     invalid_argument(const invalid_argument&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note: candidate: 'std::invalid_argument::invalid_argument(const char*)'
+  173 |     explicit invalid_argument(const char*) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note: candidate: 'std::invalid_argument::invalid_argument(const std::string&)'
+  171 |     explicit invalid_argument(const string& __arg) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note:   candidate expects 1 argument, 0 provided
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\DuplicateSensorName.o: No such file or directory
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\SensorNetwork.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:13:03 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\SensorNetwork.o" "..\\myCode\\SensorNetwork.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+..\myCode\DuplicateSensorName.cpp: In constructor 'DuplicateSensorName::DuplicateSensorName(std::string)':
+..\myCode\DuplicateSensorName.cpp:3:64: error: no matching function for call to 'std::invalid_argument::invalid_argument()'
+    3 | DuplicateSensorName::DuplicateSensorName(std::string sensorName) {
+      |                                                                ^
+In file included from ..\myCode\DuplicateSensorName.h:4,
+                 from ..\myCode\DuplicateSensorName.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note: candidate: 'std::invalid_argument::invalid_argument(std::invalid_argument&&)'
+  176 |     invalid_argument(invalid_argument&&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note: candidate: 'std::invalid_argument::invalid_argument(const std::invalid_argument&)'
+  174 |     invalid_argument(const invalid_argument&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note: candidate: 'std::invalid_argument::invalid_argument(const char*)'
+  173 |     explicit invalid_argument(const char*) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note: candidate: 'std::invalid_argument::invalid_argument(const std::string&)'
+  171 |     explicit invalid_argument(const string& __arg) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note:   candidate expects 1 argument, 0 provided
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\DuplicateSensorName.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:14:16 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+..\myCode\DuplicateSensorName.cpp: In constructor 'DuplicateSensorName::DuplicateSensorName(std::string)':
+..\myCode\DuplicateSensorName.cpp:3:64: error: no matching function for call to 'std::invalid_argument::invalid_argument()'
+    3 | DuplicateSensorName::DuplicateSensorName(std::string sensorName) {
+      |                                                                ^
+In file included from ..\myCode\DuplicateSensorName.h:4,
+                 from ..\myCode\DuplicateSensorName.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note: candidate: 'std::invalid_argument::invalid_argument(std::invalid_argument&&)'
+  176 |     invalid_argument(invalid_argument&&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:176:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note: candidate: 'std::invalid_argument::invalid_argument(const std::invalid_argument&)'
+  174 |     invalid_argument(const invalid_argument&) = default;
+      |     ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:174:5: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note: candidate: 'std::invalid_argument::invalid_argument(const char*)'
+  173 |     explicit invalid_argument(const char*) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:173:14: note:   candidate expects 1 argument, 0 provided
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note: candidate: 'std::invalid_argument::invalid_argument(const std::string&)'
+  171 |     explicit invalid_argument(const string& __arg) _GLIBCXX_TXN_SAFE;
+      |              ^~~~~~~~~~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/stdexcept:171:14: note:   candidate expects 1 argument, 0 provided
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\DuplicateSensorName.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:15:58 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:22:47 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\DuplicateSensorName.o" "..\\myCode\\DuplicateSensorName.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:25:34 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\tests.o" "..\\myCode\\tests.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:31:29 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:13:42: error: cannot convert 'std::map<float, float>::const_iterator' {aka 'std::_Rb_tree<float, std::pair<const float, float>, std::_Select1st<std::pair<const float, float> >, std::less<float>, std::allocator<std::pair<const float, float> > >::const_iterator'} to 'float' in initialization
+   13 |     float k_min = this->breakpoints.begin();
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~^~
+      |                                          |
+      |                                          std::map<float, float>::const_iterator {aka std::_Rb_tree<float, std::pair<const float, float>, std::_Select1st<std::pair<const float, float> >, std::less<float>, std::allocator<std::pair<const float, float> > >::const_iterator}
+..\myCode\TableBasedAdjuster.cpp:13:11: warning: unused variable 'k_min' [-Wunused-variable]
+   13 |     float k_min = this->breakpoints.begin();
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:31:43 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:13:19: error: cannot convert 'const std::pair<const float, float>' to 'float' in initialization
+   13 |     float k_min = *(this->breakpoints.begin());
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                   |
+      |                   const std::pair<const float, float>
+..\myCode\TableBasedAdjuster.cpp:13:11: warning: unused variable 'k_min' [-Wunused-variable]
+   13 |     float k_min = *(this->breakpoints.begin());
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:33:13 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:13:10: warning: variable 'k_min' set but not used [-Wunused-but-set-variable]
+   13 |     auto k_min= breakpoints.begin();
+      |          ^~~~~
+..\myCode\TableBasedAdjuster.cpp:14:10: warning: variable 'k_max' set but not used [-Wunused-but-set-variable]
+   14 |     auto k_max= breakpoints.end();
+      |          ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:33:43 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:13:35: error: cannot bind non-const lvalue reference of type 'std::_Rb_tree_const_iterator<std::pair<const float, float> >&' to an rvalue of type 'std::map<float, float>::const_iterator' {aka 'std::_Rb_tree<float, std::pair<const float, float>, std::_Select1st<std::pair<const float, float> >, std::less<float>, std::allocator<std::pair<const float, float> > >::const_iterator'}
+   13 |     auto& k_min= breakpoints.begin();
+      |                  ~~~~~~~~~~~~~~~~~^~
+..\myCode\TableBasedAdjuster.cpp:14:33: error: cannot bind non-const lvalue reference of type 'std::_Rb_tree_const_iterator<std::pair<const float, float> >&' to an rvalue of type 'std::map<float, float>::const_iterator' {aka 'std::_Rb_tree<float, std::pair<const float, float>, std::_Select1st<std::pair<const float, float> >, std::less<float>, std::allocator<std::pair<const float, float> > >::const_iterator'}
+   14 |     auto& k_max= breakpoints.end();
+      |                  ~~~~~~~~~~~~~~~^~
+..\myCode\TableBasedAdjuster.cpp:13:11: warning: unused variable 'k_min' [-Wunused-variable]
+   13 |     auto& k_min= breakpoints.begin();
+      |           ^~~~~
+..\myCode\TableBasedAdjuster.cpp:14:11: warning: unused variable 'k_max' [-Wunused-variable]
+   14 |     auto& k_max= breakpoints.end();
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:33:51 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:13:10: warning: variable 'k_min' set but not used [-Wunused-but-set-variable]
+   13 |     auto k_min= breakpoints.begin();
+      |          ^~~~~
+..\myCode\TableBasedAdjuster.cpp:14:10: warning: variable 'k_max' set but not used [-Wunused-but-set-variable]
+   14 |     auto k_max= breakpoints.end();
+      |          ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:36:08 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:16:11: warning: unused variable 'k_min' [-Wunused-variable]
+   16 |     float k_min = min->first;
+      |           ^~~~~
+..\myCode\TableBasedAdjuster.cpp:17:11: warning: unused variable 'k_max' [-Wunused-variable]
+   17 |     float k_max = max->first;
+      |           ^~~~~
+..\myCode\TableBasedAdjuster.cpp:18:11: warning: unused variable 'v_min' [-Wunused-variable]
+   18 |     float v_min = min->second;
+      |           ^~~~~
+..\myCode\TableBasedAdjuster.cpp:19:11: warning: unused variable 'v_max' [-Wunused-variable]
+   19 |     float v_max = min->second;
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:36:54 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:17:11: warning: unused variable 'k_max' [-Wunused-variable]
+   17 |     float k_max = max->first;
+      |           ^~~~~
+..\myCode\TableBasedAdjuster.cpp:19:11: warning: unused variable 'v_max' [-Wunused-variable]
+   19 |     float v_max = min->second;
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:37:37 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:42:41 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:28:28: error: cannot convert 'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' to 'float' in initialization
+   28 |     float k_np1 = std::next(min);
+      |                   ~~~~~~~~~^~~~~
+      |                            |
+      |                            std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >
+..\myCode\TableBasedAdjuster.cpp:28:11: warning: unused variable 'k_np1' [-Wunused-variable]
+   28 |     float k_np1 = std::next(min);
+      |           ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status
+17:42:51 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:28:10: warning: variable 'k_np1' set but not used [-Wunused-but-set-variable]
+   28 |     auto k_np1 = std::next(min);
+      |          ^~~~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+17:48:11 **** Incremental Build of configuration Debug for project Exam-2023SoSe ****
+Info: Internal Builder is used for build
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -o "myCode\\TableBasedAdjuster.o" "..\\myCode\\TableBasedAdjuster.cpp" 
+..\myCode\TableBasedAdjuster.cpp: In member function 'virtual float TableBasedAdjuster::adjust(float) const':
+..\myCode\TableBasedAdjuster.cpp:29:25: error: no match for 'operator!=' (operand types are 'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' and 'std::_Rb_tree_const_iterator<std::pair<const float, float> >')
+   29 |     for(auto it= min; it!=max; it++)
+      |                       ~~^~~~~
+      |                       |   |
+      |                       |   std::_Rb_tree_const_iterator<std::pair<const float, float> >
+      |                       std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_algobase.h:64,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:63,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:62,
+                 from ..\myCode\TableBasedAdjuster.h:4,
+                 from ..\myCode\TableBasedAdjuster.cpp:1:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:842:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator!=(const pair<_T1, _T2>&, const pair<_T1, _T2>&)'
+  842 |     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_pair.h:842:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::pair<_T1, _T2>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_algobase.h:67:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:462:5: note: candidate: 'template<class _Iterator> bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_Iterator>&)'
+  462 |     operator!=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:462:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::reverse_iterator<_Iterator>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:507:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator!=(const reverse_iterator<_Iterator>&, const reverse_iterator<_IteratorR>&)'
+  507 |     operator!=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:507:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::_Rb_tree_const_iterator<std::pair<const float, float> >' is not derived from 'const std::reverse_iterator<_IteratorR>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1697:5: note: candidate: 'template<class _IteratorL, class _IteratorR> bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorR>&)'
+ 1697 |     operator!=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1697:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::move_iterator<_IteratorL>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1763:5: note: candidate: 'template<class _Iterator> bool std::operator!=(const move_iterator<_IteratorL>&, const move_iterator<_IteratorL>&)'
+ 1763 |     operator!=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_iterator.h:1763:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::move_iterator<_IteratorL>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:64:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:245:5: note: candidate: 'template<class _T1, class _T2> bool std::operator!=(const allocator<_Tp1>&, const allocator<_T2>&)'
+  245 |     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/allocator.h:245:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::allocator<_Tp1>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:63,
+                 from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:63:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1960:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const tuple<_Args1 ...>&, const tuple<_Args2 ...>&)'
+ 1960 |     operator!=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/tuple:1960:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::tuple<_Args1 ...>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1558:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const map<_Key, _Tp, _Compare, _Alloc>&, const map<_Key, _Tp, _Compare, _Alloc>&)'
+ 1558 |     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_map.h:1558:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::map<_Key, _Tp, _Compare, _Alloc>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+In file included from C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/map:64:
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1179:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>&, const multimap<_Key, _Tp, _Compare, _Alloc>&)'
+ 1179 |     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_multimap.h:1179:5: note:   template argument deduction/substitution failed:
+..\myCode\TableBasedAdjuster.cpp:29:27: note:   'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Alloc>'
+   29 |     for(auto it= min; it!=max; it++)
+      |                           ^~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:401:7: note: candidate: 'bool std::operator!=(const _Rb_tree_const_iterator<pair<const float, float> >::_Self&, const _Rb_tree_const_iterator<pair<const float, float> >::_Self&)'
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |       ^~~~~~~~
+C:/Program Files/GIT/eclipse/mingw/mingw64/include/c++/13.2.0/bits/stl_tree.h:401:31: note:   no known conversion for argument 1 from 'std::reverse_iterator<std::_Rb_tree_const_iterator<std::pair<const float, float> > >' to 'const std::_Rb_tree_const_iterator<std::pair<const float, float> >::_Self&'
+  401 |       operator!=(const _Self& __x, const _Self& __y) _GLIBCXX_NOEXCEPT
+      |                  ~~~~~~~~~~~~~^~~
+g++ -o Exam-2023SoSe "myCode\\Adjuster.o" "myCode\\DuplicateSensorName.o" "myCode\\LinearAdjuster.o" "myCode\\NullAdjuster.o" "myCode\\Sensor.o" "myCode\\SensorNetwork.o" "myCode\\TableBasedAdjuster.o" "myCode\\TestSensor.o" "myCode\\main.o" "myCode\\tests.o" -lPocoData -lPocoJSON -lPocoFoundation 
+C:/Program Files/GIT/eclipse/mingw/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/13.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find myCode\TableBasedAdjuster.o: No such file or directory
+collect2.exe: error: ld returned 1 exit status

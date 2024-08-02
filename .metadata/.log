@@ -15,3 +15,9 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2024-08-01 22:07:33.451
 !MESSAGE Indexed 'Exam-2023WiSe' (11 sources, 9 headers) in 0.519 sec: 157 declarations; 187 references; 24 unresolved inclusions; 0 syntax errors; 197 unresolved names (36%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-08-01 22:13:16.935
+!MESSAGE Indexed 'ModuloN' (1 sources, 141 headers) in 2.44 sec: 16,447 declarations; 26,371 references; 0 unresolved inclusions; 1 syntax errors; 4 unresolved names (0.0093%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-08-02 16:17:36.453
+!MESSAGE Indexed 'Exam-2023SoSe' (10 sources, 8 headers) in 0.052 sec: 68 declarations; 38 references; 13 unresolved inclusions; 0 syntax errors; 51 unresolved names (32%)

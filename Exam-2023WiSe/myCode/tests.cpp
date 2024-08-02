@@ -36,6 +36,20 @@ void shoppingListTests() {
 	 * the items and assert that for each that they have the
 	 * expected name and quantity. (12 points)
 	 */
+	std::map<std::string, float> itemList= {{"milk", 2},{"butter", 250},{"bread", 1.5}};
+	ShoppingList sList;
+	sList.addItem("milk", 2).addItem("butter", 250).addItem("bread", 1.5);
+	std::list<Item>::const_iterator begin, end;
+	sList.items(begin, end);
+	for(auto& i = begin; i!= end; i++){
+		std::string name = i->getName();
+		for(auto it = itemList.begin(); it!= itemList.end(); it++)
+		{
+			if(name == it->first){
+				assertTrue(i->getQuantity() == it->second,"Item not found");
+			}
+		}
+	}
 
 
 }
@@ -58,7 +72,20 @@ void shopDbTests() {
      *     set "names" is empty.
      *   (7 points)
      */
+	set<string> names = { "Foodie1", "Bakers4less", "Spiceology", "Grainfruit",
+			"Sweetteas", "Savorystyle", "TheSpiceHouse", "FoodieFun",
+			"FlavorStation", "DoughLife", "INGredientsOnly", "FreshFix",
+			"Tastync", "FlavorFile", "BiteMe", "TheFlavorSpot",
+			"AtisfyMyCravings", "TastyTreats", "TheFoodFactor", "MunchiesLand",
+			"TheSnackCave", "FoodieFrenzy", "TheMorselMansion", "BiteClub",
+			"TheSavorStore", "TheFoodieFactor", "FlavorfulFinds",
+			"TheTastyTrove" };
 
+	ShopDb shopkiDb;
+	for(auto name:names)
+	{
+		shopkiDb.addShop(std::make_unique<Shop> (name));
+	}
 
 
 	/*
