@@ -1,8 +1,8 @@
-13:20:42 **** Incremental Build of configuration Debug for project Exam-2023WiSe ****
+13:26:42 **** Incremental Build of configuration Debug for project Exam-2023WiSe ****
 Info: Internal Builder is used for build
-g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\Shop.o ..\myCode\Shop.cpp 
+g++ -std=c++1y -O0 -g3 -Wall -c -fmessage-length=0 -Werror=return-type -o myCode\tests.o ..\myCode\tests.cpp 
 g++ -o Exam-2023WiSe myCode\Discount.o myCode\FixedDiscount.o myCode\Item.o myCode\NoDiscount.o myCode\Product.o myCode\QuantityDiscount.o myCode\Shop.o myCode\ShopDb.o myCode\ShoppingList.o myCode\main.o myCode\tests.o 
 Info: Parallel threads used: 1
 
-13:20:43 Build Finished. 0 errors, 0 warnings. (took 752ms)
+13:26:43 Build Finished. 0 errors, 0 warnings. (took 1s.158ms)
 

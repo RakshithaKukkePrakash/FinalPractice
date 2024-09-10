@@ -11,19 +11,26 @@
 using namespace std;
 
 ShopDb& ShopDb::addShop(std::unique_ptr<Shop> &&shop) {
-	this->knownShops[shop->getName()] = std::move(shop);
+	unique_ptr<Shop> sPtr = make_unique<Shop>(shop->getName());
+	this->knownShops.insert(make_pair(shop->getName(), move(sPtr)));
 	return *this;
 }
 
 std::vector<Shop*> ShopDb::shops() const {
 	std::vector<Shop*> shopVect;
-	for(auto itr = knownShops.begin(); itr != knownShops.end(); itr++){
-		//shopVect.push_back(itr->second);
+	for(auto& s: knownShops){
+		shopVect.push_back(move(s.second.get()));
 	}
+
 	return shopVect;
 }
 
-
-//Shop* ShopDb::shopByName(std::string name) {
-//	return this;
-//}
+Shop* ShopDb::shopByName(std::string name) {
+	Shop* sPtr=nullptr;
+	for(auto& s: knownShops){
+		if(name == s.first){
+			sPtr = s.second.get();
+		}
+	}
+	return sPtr;
+}

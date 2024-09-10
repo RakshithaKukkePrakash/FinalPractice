@@ -15,7 +15,7 @@
 
 using namespace std;
 
-Shop::Shop(std::string name) : name(name) {
+Shop::Shop(std::string name): name(name){
 }
 
 std::string Shop::getName() const {
@@ -23,7 +23,6 @@ std::string Shop::getName() const {
 }
 
 Shop& Shop::addProduct(const Product &product) {
-	this->products.insert(std::make_pair(this->name, product));
 	return *this;
 }
 
